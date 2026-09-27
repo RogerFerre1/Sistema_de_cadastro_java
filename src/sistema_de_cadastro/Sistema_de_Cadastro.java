@@ -10,16 +10,10 @@ package sistema_de_cadastro;
  */
 public class Sistema_de_Cadastro {
     
+    static Pessoa[] pessoa = new Pessoa[100];
+    static int total_pessoas = 0;
+    
     public static void main(String[] args) {
-        Pessoa[] pessoa = new Pessoa[100];
-        int total_pessoas = 0;
-        
-        pessoa[total_pessoas] = new Pessoa();
-        pessoa[total_pessoas].nome = "Rogin";
-        pessoa[total_pessoas].cpf = "O mais brabo";
-        total_pessoas++;
-        
-        System.out.println(pessoa[0].nome);
         
         TelaPrincipal tela = new TelaPrincipal();
         tela.setVisible(true);

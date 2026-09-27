@@ -4,6 +4,8 @@
  */
 package sistema_de_cadastro;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rogin
@@ -38,7 +40,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         cpfCadastro = new javax.swing.JTextField();
         telefoneCadastro = new javax.swing.JTextField();
         emailCadastro = new javax.swing.JTextField();
-        btnSair = new javax.swing.JButton();
+        btnVoltarCad = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,26 +63,24 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         nomeCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         nomeCadastro.setForeground(new java.awt.Color(102, 102, 102));
-        nomeCadastro.setText("Digite seu nome");
 
         cpfCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cpfCadastro.setForeground(new java.awt.Color(102, 102, 102));
-        cpfCadastro.setText("Digite seu CPF");
 
         telefoneCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         telefoneCadastro.setForeground(new java.awt.Color(102, 102, 102));
-        telefoneCadastro.setText("Digite seu telefone");
         telefoneCadastro.addActionListener(this::telefoneCadastroActionPerformed);
 
         emailCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         emailCadastro.setForeground(new java.awt.Color(102, 102, 102));
-        emailCadastro.setText("Digite seu e-mail");
 
-        btnSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnSair.setText("Sair");
+        btnVoltarCad.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnVoltarCad.setText("Voltar");
+        btnVoltarCad.addActionListener(this::btnVoltarCadActionPerformed);
 
         btnCadastrar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(this::btnCadastrarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -92,7 +92,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(btnCadastrar)
                         .addGap(47, 47, 47)
-                        .addComponent(btnSair))
+                        .addComponent(btnVoltarCad))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(48, 48, 48)
@@ -142,7 +142,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                     .addComponent(emailCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSair)
+                    .addComponent(btnVoltarCad)
                     .addComponent(btnCadastrar))
                 .addGap(36, 36, 36))
         );
@@ -164,6 +164,36 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void telefoneCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneCadastroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telefoneCadastroActionPerformed
+
+    private void btnVoltarCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCadActionPerformed
+        this.dispose();
+        
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
+    }//GEN-LAST:event_btnVoltarCadActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        String nome = nomeCadastro.getText();
+        String cpf = cpfCadastro.getText();
+        String telefone = telefoneCadastro.getText();
+        String email = emailCadastro.getText();
+        
+        Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas] = new Sistema_de_Cadastro.Pessoa();
+        
+        Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas].nome = nome;
+        Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas].cpf = cpf;
+        Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas].telefone = telefone;
+        Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas].email = email;
+        
+        Sistema_de_Cadastro.total_pessoas++;
+        
+        nomeCadastro.setText("");
+        cpfCadastro.setText("");
+        telefoneCadastro.setText("");
+        emailCadastro.setText("");
+        
+        JOptionPane.showMessageDialog(this, "Cliente cadastrado com sucesso!");
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,7 +222,7 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
-    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnVoltarCad;
     private javax.swing.JTextField cpfCadastro;
     private javax.swing.JTextField emailCadastro;
     private javax.swing.JLabel jLabel1;

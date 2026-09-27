@@ -48,13 +48,13 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="verificarCadastros" min="-2" max="-2" attributes="0"/>
-                              <Component id="cadastrarCliente" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVerificarCadastros" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCadastrarCliente" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="sair" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSair" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -67,11 +67,11 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                  <Component id="cadastrarCliente" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCadastrarCliente" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="verificarCadastros" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnVerificarCadastros" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="sair" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSair" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="120" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -86,7 +86,7 @@
             <Property name="text" type="java.lang.String" value="SISTEMA DE CADASTRO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="cadastrarCliente">
+        <Component class="javax.swing.JButton" name="btnCadastrarCliente">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="1"/>
@@ -94,10 +94,10 @@
             <Property name="text" type="java.lang.String" value="Cadastrar cliente"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastrarClienteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="verificarCadastros">
+        <Component class="javax.swing.JButton" name="btnVerificarCadastros">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="1"/>
@@ -105,10 +105,10 @@
             <Property name="text" type="java.lang.String" value="Verificar cadastros"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="verificarCadastrosActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerificarCadastrosActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="sair">
+        <Component class="javax.swing.JButton" name="btnSair">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="1"/>
@@ -116,7 +116,7 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

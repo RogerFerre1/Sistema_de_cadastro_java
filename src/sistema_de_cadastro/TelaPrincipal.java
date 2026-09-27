@@ -30,9 +30,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        cadastrarCliente = new javax.swing.JButton();
-        verificarCadastros = new javax.swing.JButton();
-        sair = new javax.swing.JButton();
+        btnCadastrarCliente = new javax.swing.JButton();
+        btnVerificarCadastros = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Cadastro");
@@ -40,17 +40,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("SISTEMA DE CADASTRO");
 
-        cadastrarCliente.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        cadastrarCliente.setText("Cadastrar cliente");
-        cadastrarCliente.addActionListener(this::cadastrarClienteActionPerformed);
+        btnCadastrarCliente.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnCadastrarCliente.setText("Cadastrar cliente");
+        btnCadastrarCliente.addActionListener(this::btnCadastrarClienteActionPerformed);
 
-        verificarCadastros.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        verificarCadastros.setText("Verificar cadastros");
-        verificarCadastros.addActionListener(this::verificarCadastrosActionPerformed);
+        btnVerificarCadastros.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnVerificarCadastros.setText("Verificar cadastros");
+        btnVerificarCadastros.addActionListener(this::btnVerificarCadastrosActionPerformed);
 
-        sair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        sair.setText("Sair");
-        sair.addActionListener(this::sairActionPerformed);
+        btnSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnSair.setText("Sair");
+        btnSair.addActionListener(this::btnSairActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,11 +64,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addGap(78, 78, 78))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(verificarCadastros)
-                            .addComponent(cadastrarCliente))
+                            .addComponent(btnVerificarCadastros)
+                            .addComponent(btnCadastrarCliente))
                         .addGap(148, 148, 148))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(sair)
+                        .addComponent(btnSair)
                         .addGap(185, 185, 185))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -77,11 +77,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(83, 83, 83)
-                .addComponent(cadastrarCliente)
+                .addComponent(btnCadastrarCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verificarCadastros)
+                .addComponent(btnVerificarCadastros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sair)
+                .addComponent(btnSair)
                 .addContainerGap(120, Short.MAX_VALUE))
         );
 
@@ -99,18 +99,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarClienteActionPerformed
+    private void btnCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarClienteActionPerformed
+        this.setVisible(false);
+        
         TelaCadastro telaCadastro = new TelaCadastro();
         telaCadastro.setVisible(true);  
-    }//GEN-LAST:event_cadastrarClienteActionPerformed
+    }//GEN-LAST:event_btnCadastrarClienteActionPerformed
 
-    private void verificarCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificarCadastrosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_verificarCadastrosActionPerformed
+    private void btnVerificarCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarCadastrosActionPerformed
+        this.setVisible(false);
+        
+        TelaLista telaLista = new TelaLista();
+        telaLista.setVisible(true);
+    }//GEN-LAST:event_btnVerificarCadastrosActionPerformed
 
-    private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_sairActionPerformed
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,10 +143,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrarCliente;
+    private javax.swing.JButton btnCadastrarCliente;
+    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnVerificarCadastros;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton sair;
-    private javax.swing.JButton verificarCadastros;
     // End of variables declaration//GEN-END:variables
 }
