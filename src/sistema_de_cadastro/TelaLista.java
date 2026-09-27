@@ -136,6 +136,8 @@ public class TelaLista extends javax.swing.JFrame {
             Sistema_de_Cadastro.pessoa[Sistema_de_Cadastro.total_pessoas] = null;
         
             carregarTabela();
+            
+            Sistema_de_Cadastro.salvarArquivo();
         }else{
             return;
         }

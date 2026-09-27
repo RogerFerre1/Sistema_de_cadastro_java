@@ -187,6 +187,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         
         Sistema_de_Cadastro.total_pessoas++;
         
+        Sistema_de_Cadastro.salvarArquivo();
+        
         nomeCadastro.setText("");
         cpfCadastro.setText("");
         telefoneCadastro.setText("");
